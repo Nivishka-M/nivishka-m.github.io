@@ -26,7 +26,7 @@
       <nav class="nav" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item"><a href="#tools" class="nav__link">Tools</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
           </li>
@@ -43,7 +43,8 @@
           <span>Nivishka Manchanayake</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
+        <p>Computer Science & Engineering Undergrad (Final Year)
+          University of Moratuwa, Sri Lanka</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -55,110 +56,242 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>My Portfolio</h2>
+        
+        <!-- Category Filter Tabs -->
+        <div class="work__filters">
+          <button class="work__filter active" data-category="all">All</button>
+          <button class="work__filter" data-category="security">
+            <span class="filter__icon">🔐</span> Cybersecurity
+          </button>
+          <button class="work__filter" data-category="development">
+            <span class="filter__icon">💻</span> Development
+          </button>
+          <button class="work__filter" data-category="design">
+            <span class="filter__icon">🎨</span> Designing
+          </button>
+          <button class="work__filter" data-category="education">
+            <span class="filter__icon">📚</span> Education
+          </button>
+        </div>
+
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
 
-          <div class="work__box">
+          <div class="work__box" data-category="education development">
+            <div class="work__category-badge work__category--education">Final Year Project</div>
             <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
+              <div class="work__header">
+                <h3>CrowdSync - Dynamic Pixel Localization</h3>
+                <span class="work__date">Ongoing <span class="work__status">FYP</span></span>
+              </div>
+              <p>Adaptive Crowd Choreography</p>
               <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
+                <li>STM32</li>
+                <li>UWB</li>
+                <li>Sub 1GHz RF</li>
+                <li>C++</li>
+                <li>Python</li>
               </ul>
-
+              <ul class="work__bullets">
+                <li>Developing an indoor localization system capable of tracking a massive number of nodes in real time using Ultra-Wideband (UWB) radio signals</li>
+                <li>Integrating the localization results into a control pipeline that can drive dynamic, synchronized light patterns on wearable light bands, enabling large-scale visual effects for the entertainment industry</li>
+              </ul>
               <div class="work__links">
-                <a href=" Link " target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="#" class="link__text">
+                  View Project <span>&rarr;</span>
                 </a>
-                <a href=" Link " title="View Source Code" target="_blank">
+                <a href="#" title="View Source Code" target="_blank">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
           </div>
 
-          <div class="work__box">
+          <div class="work__box" data-category="security development">
+            <div class="work__category-badge work__category--security">Cybersecurity</div>
             <div class="work__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
+              <div class="work__header">
+                <h3>SecureVote - Secure E-voting System</h3>
+                <span class="work__date">2025 Sep - Oct</span>
+              </div>
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>Flutter (Dart)</li>
+                <li>FastAPI (Python)</li>
+                <li>Node.js</li>
+                <li>Cryptography</li>
               </ul>
-
+              <ul class="work__bullets">
+                <li>Implemented advanced cryptographic concepts to build a satisfactorily secure E-voting system as part of a group project</li>
+                <li>Developed a mobile application for voters to cast ballots securely</li>
+                <li>Created a web interface for administrators to verify and manage voting data</li>
+              </ul>
               <div class="work__links">
                 <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                  View Project <span>&rarr;</span>
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="#" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
           </div>
 
-          <div class="work__box">
+          <div class="work__box" data-category="development design">
+            <div class="work__category-badge work__category--development">Development</div>
             <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
+              <div class="work__header">
+                <h3>Stuffbi - Personal Items Management</h3>
+                <span class="work__date">2025 Nov - Dec</span>
+              </div>
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>Flutter (Dart)</li>
+                <li>SQFlite</li>
+                <li>UI/UX</li>
               </ul>
-
+              <ul class="work__bullets">
+                <li>Designed and developed a local-first mobile solution using Flutter and SQLite, using mobile computing concepts and implementing relational data models to handle dynamic item-bundle associations</li>
+                <li>Implemented structured state handling to manage complex data flows, ensuring data integrity during item transfers and bundle updates</li>
+              </ul>
               <div class="work__links">
                 <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                  View Project <span>&rarr;</span>
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="#" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
+          </div>
+
+          <div class="work__box" data-category="development design">
+            <div class="work__category-badge work__category--design">Design & Dev</div>
+            <div class="work__text">
+              <div class="work__header">
+                <h3>Sanchaara - Tourist Event Platform</h3>
+                <span class="work__date">2025 Mar - Jun</span>
+              </div>
+              <ul class="work__list">
+                <li>Flutter (Dart)</li>
+                <li>Spring Boot</li>
+                <li>Docker</li>
+              </ul>
+              <ul class="work__bullets">
+                <li>Designed and developed a mobile application connecting tourists with event organizers</li>
+                <li>Built core features for event creation, discovery, booking, user profiles, real-time updates, and location-based recommendations, strengthening the platform's overall functionality and user experience</li>
+              </ul>
+              <div class="work__links">
+                <a href="#" class="link__text">
+                  View Project <span>&rarr;</span>
+                </a>
+                <a href="#" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ***** Clients ***** -->
+    <!-- ***** Tools ***** -->
 
-    <section class="client" id="clients">
+    <section class="tools" id="tools">
       <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
+        <h2>Tools & Technologies</h2>
+        <div class="tools__grid">
+          <!-- Languages -->
+          <div class="tools__category">
+            <h4 class="tools__category-title">Languages</h4>
+            <div class="tools__items">
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                <span>Python</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" />
+                <span>Dart</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+                <span>C++</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <span>JavaScript</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+                <span>Java</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="tools__category">
+            <h4 class="tools__category-title">Frameworks</h4>
+            <div class="tools__items">
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" />
+                <span>Flutter</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" />
+                <span>FastAPI</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" />
+                <span>Spring Boot</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                <span>Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="tools__category">
+            <h4 class="tools__category-title">Tools & Platforms</h4>
+            <div class="tools__items">
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+                <span>Docker</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                <span>Git</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+                <span>Linux</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+                <span>VS Code</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+                <span>SQLite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded & Hardware -->
+          <div class="tools__category">
+            <h4 class="tools__category-title">Embedded & Hardware</h4>
+            <div class="tools__items">
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg" alt="STM32" />
+                <span>STM32</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" />
+                <span>Arduino</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -167,28 +300,26 @@
 
     <section class="about" id="about">
       <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
+      <h2>About Me</h2>
+      <div class="about__content" style="display: flex; align-items: center; gap: 2rem;">
+        <div class="about__text" style="flex: 1;">
+        <!-- Replace the below paragraph with info about yourself -->
+        <p>
+          Driven to deepen my expertise in cybersecurity and secure systems development, while also expanding into systems engineering, software development, and AI. Committed to strengthening technical capabilities, building secure and scalable solutions, and staying current with evolving technology trends. Equipped with strong analytical skills and both strategic & tactical thinking to deliver optimal solutions in complex situations.
+        </p>
+        <!-- Provide a link to your resume -->
+        <a href="#" class="btn">My Resume</a>
+        </div>
 
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
+        <div class="about__photo-container" style="flex-shrink: 0;">
+        <!-- Add a nice photo of yourself -->
+        <img class="about__photo" src="./images/Nivishka Manchanayake.png" alt="" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover;" />
         </div>
       </div>
+      </div>
     </section>
-  </main>
+    </main>
+
 
   <!-- ***** Contact ***** -->
 
@@ -196,16 +327,8 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <a href="mailto:nivishkaahith@gmail.com" class="btn">nivishkaahith@gmail.com</a>
       </div>
     </div>
   </section>
@@ -216,23 +339,23 @@
     <div class="row">
       <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <li class="footer__social-link-item">
+        <!-- <li class="footer__social-link-item">
           <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
             <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
           </a>
-        </li>
+        </li> -->
         <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
+          <a href="https://github.com/Nivishka-M/" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-        <li class="footer__social-link-item">
+        <!-- <li class="footer__social-link-item">
           <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
             <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
           </a>
-        </li>
+        </li> -->
         <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
+          <a href=https://www.linkedin.com/in/nivishka-manchanayake-381870240/ title="Link to Linkedin Profile">
             <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
@@ -240,14 +363,14 @@
 
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2025 - All rights reserved.
       </p>
-      <div class="footer__github-buttons">
+      <!-- <div class="footer__github-buttons">
         <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          src="https://ghbtns.com/github-btn.html?user=Nivishka-M&repo=portfolio-template&type=watch&count=true"
           frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
         </iframe>
-      </div>
+      </div> -->
     </div>
   </footer>
 

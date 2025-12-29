@@ -41,3 +41,48 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+/* -----------------------------------------
+  Portfolio Filter Functionality 
+ ---------------------------------------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.work__filter');
+  const workBoxes = document.querySelectorAll('.work__box');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      button.classList.add('active');
+
+      const category = button.getAttribute('data-category');
+
+      workBoxes.forEach(box => {
+        const boxCategories = box.getAttribute('data-category');
+        
+        if (category === 'all' || boxCategories.includes(category)) {
+          box.style.opacity = '1';
+          box.style.transform = 'scale(1)';
+          box.style.display = 'block';
+          // Add a small delay for smooth animation
+          setTimeout(() => {
+            box.style.opacity = '1';
+          }, 50);
+        } else {
+          box.style.opacity = '0';
+          box.style.transform = 'scale(0.8)';
+          setTimeout(() => {
+            box.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+
+  // Add smooth transition styles to work boxes
+  workBoxes.forEach(box => {
+    box.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+  });
+});
