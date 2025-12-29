@@ -6,18 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 
-  <!-- Put your site title here -->
-  <title>
-    Nivishka Manchanayake | Computer Science & Engineering UG (Final Year)
-  </title>
+  <title>Nivishka Manchanayake | Cybersecurity & Software Engineer</title>
 
-  <meta name="About" content="Aspiring Computer Science & Engineer specializing in cybersecurity, with a strong interest in secure systems development and software engineering. I work with a security-first mindset, thinking beyond “𝗶𝘁 𝘄𝗼𝗿𝗸𝘀” 𝘁𝗼 𝗵𝗼𝘄 𝗶𝘁 𝗳𝗮𝗶𝗹𝘀, 𝗵𝗼𝘄 𝗶𝘁 𝘀𝗰𝗮𝗹𝗲𝘀, 𝗮𝗻𝗱 𝗵𝗼𝘄 𝗶𝘁 𝗰𝗮𝗻 𝗯𝗲 𝗮𝘁𝘁𝗮𝗰𝗸𝗲𝗱 𝗶𝗻 𝗿𝗲𝗮𝗹 𝗲𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁𝘀">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="description" content="Aspiring Cybersecurity Professional & Software Engineer specializing in secure systems development. Security-first mindset - thinking beyond 'it works' to how it fails, how it scales, and how it can be attacked.">
+  <meta name="keywords" content="Cybersecurity, Penetration Testing, Secure Development, Python, Cryptography, Network Security, Software Engineering" />
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
 
   <!-- ***** Header ***** -->
 
@@ -25,7 +29,8 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Arsenal</a></li>
           <li class="nav__item"><a href="#tools" class="nav__link">Tools</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
@@ -39,24 +44,38 @@
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Nivishka Manchanayake</span>
+          <span id="glitch-name" data-text="Nivishka Manchanayake">Nivishka Manchanayake</span>
         </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>Computer Science & Engineering Undergrad (Final Year)
-          University of Moratuwa, Sri Lanka</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <p>
+          <span class="typing-container" id="typing-text"></span>
+        </p>
+        
+        <!-- Status Indicators -->
+        <div class="header__status">
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <span>System Online</span>
+          </div>
+          <div class="status-item">
+            <span class="status-dot"></span>
+            <span>Secure Connection</span>
+          </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+          <a href="#contact" class="btn btn--pink">Initialize Contact</a>
+        </div>
       </div>
     </div>
   </header>
 
   <main role="main">
 
-    <!-- ***** Work ***** -->
+    <!-- ***** Work / Projects ***** -->
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Portfolio</h2>
+        <h2>// Projects</h2>
         
         <!-- Category Filter Tabs -->
         <div class="work__filters">
@@ -77,16 +96,15 @@
 
         <div class="work__boxes">
 
-          <!-- Each div with the work__box class is a project. -->
-
+          <!-- Project 1 - FYP -->
           <div class="work__box" data-category="education development">
             <div class="work__category-badge work__category--education">Final Year Project</div>
             <div class="work__text">
               <div class="work__header">
                 <h3>CrowdSync - Dynamic Pixel Localization</h3>
-                <span class="work__date">Ongoing <span class="work__status">FYP</span></span>
+                <span class="work__date">Ongoing <span class="work__status">ACTIVE</span></span>
               </div>
-              <p>Adaptive Crowd Choreography</p>
+              <p>Adaptive Crowd Choreography System</p>
               <ul class="work__list">
                 <li>STM32</li>
                 <li>UWB</li>
@@ -96,7 +114,7 @@
               </ul>
               <ul class="work__bullets">
                 <li>Developing an indoor localization system capable of tracking a massive number of nodes in real time using Ultra-Wideband (UWB) radio signals</li>
-                <li>Integrating the localization results into a control pipeline that can drive dynamic, synchronized light patterns on wearable light bands, enabling large-scale visual effects for the entertainment industry</li>
+                <li>Integrating the localization results into a control pipeline that can drive dynamic, synchronized light patterns on wearable light bands</li>
               </ul>
               <div class="work__links">
                 <a href="#" class="link__text">
@@ -109,6 +127,7 @@
             </div>
           </div>
 
+          <!-- Project 2 - SecureVote -->
           <div class="work__box" data-category="security development">
             <div class="work__category-badge work__category--security">Cybersecurity</div>
             <div class="work__text">
@@ -138,6 +157,7 @@
             </div>
           </div>
 
+          <!-- Project 3 - Stuffbi -->
           <div class="work__box" data-category="development design">
             <div class="work__category-badge work__category--development">Development</div>
             <div class="work__text">
@@ -151,7 +171,7 @@
                 <li>UI/UX</li>
               </ul>
               <ul class="work__bullets">
-                <li>Designed and developed a local-first mobile solution using Flutter and SQLite, using mobile computing concepts and implementing relational data models to handle dynamic item-bundle associations</li>
+                <li>Designed and developed a local-first mobile solution using Flutter and SQLite, implementing relational data models to handle dynamic item-bundle associations</li>
                 <li>Implemented structured state handling to manage complex data flows, ensuring data integrity during item transfers and bundle updates</li>
               </ul>
               <div class="work__links">
@@ -165,6 +185,7 @@
             </div>
           </div>
 
+          <!-- Project 4 - Sanchaara -->
           <div class="work__box" data-category="development design">
             <div class="work__category-badge work__category--design">Design & Dev</div>
             <div class="work__text">
@@ -179,7 +200,7 @@
               </ul>
               <ul class="work__bullets">
                 <li>Designed and developed a mobile application connecting tourists with event organizers</li>
-                <li>Built core features for event creation, discovery, booking, user profiles, real-time updates, and location-based recommendations, strengthening the platform's overall functionality and user experience</li>
+                <li>Built core features for event creation, discovery, booking, user profiles, real-time updates, and location-based recommendations</li>
               </ul>
               <div class="work__links">
                 <a href="#" class="link__text">
@@ -195,12 +216,135 @@
       </div>
     </section>
 
+    <!-- ***** Security Arsenal ***** -->
+
+    <section class="skills" id="skills">
+      <div class="row">
+        <h2>// Security Arsenal</h2>
+        <div class="skills__grid">
+          
+          <!-- Offensive Security -->
+          <div class="skill__category">
+            <div class="skill__header">
+              <span class="skill__icon">⚔️</span>
+              <h3 class="skill__title">Offensive Security</h3>
+            </div>
+            <ul class="skill__list">
+              <li>
+                <span class="skill__name">Penetration Testing</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="75"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">Vulnerability Assessment</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="80"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">Web Application Security</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="70"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Defensive Security -->
+          <div class="skill__category">
+            <div class="skill__header">
+              <span class="skill__icon">🛡️</span>
+              <h3 class="skill__title">Defensive Security</h3>
+            </div>
+            <ul class="skill__list">
+              <li>
+                <span class="skill__name">Network Security</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="70"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">Secure Code Review</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="75"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">Incident Response</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="65"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cryptography -->
+          <div class="skill__category">
+            <div class="skill__header">
+              <span class="skill__icon">🔐</span>
+              <h3 class="skill__title">Cryptography</h3>
+            </div>
+            <ul class="skill__list">
+              <li>
+                <span class="skill__name">Encryption Algorithms</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="80"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">PKI & Certificates</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="75"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">Hash Functions</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="85"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Development -->
+          <div class="skill__category">
+            <div class="skill__header">
+              <span class="skill__icon">💻</span>
+              <h3 class="skill__title">Secure Development</h3>
+            </div>
+            <ul class="skill__list">
+              <li>
+                <span class="skill__name">Python</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="90"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">Flutter & Dart</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="85"></div></div>
+              </li>
+              <li>
+                <span class="skill__name">C/C++</span>
+                <div class="skill__bar"><div class="skill__progress" data-progress="70"></div></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ***** Tools ***** -->
 
     <section class="tools" id="tools">
       <div class="row">
-        <h2>Tools & Technologies</h2>
+        <h2>// Tools & Technologies</h2>
         <div class="tools__grid">
+          
+          <!-- Security Tools -->
+          <div class="tools__category">
+            <h4 class="tools__category-title">Security Tools</h4>
+            <div class="tools__items">
+              <div class="tools__item">
+                <img src="https://www.kali.org/images/kali-dragon-icon.svg" alt="Kali Linux" />
+                <span>Kali Linux</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+                <span>Linux</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://nmap.org/images/sitelogo-nmap.svg" alt="Nmap" />
+                <span>Nmap</span>
+              </div>
+              <div class="tools__item">
+                <img src="https://www.wireshark.org/assets/icons/wireshark-fin@2x.png" alt="Wireshark" />
+                <span>Wireshark</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Languages -->
           <div class="tools__category">
             <h4 class="tools__category-title">Languages</h4>
@@ -251,9 +395,9 @@
             </div>
           </div>
 
-          <!-- Tools & Platforms -->
+          <!-- DevOps & Hardware -->
           <div class="tools__category">
-            <h4 class="tools__category-title">Tools & Platforms</h4>
+            <h4 class="tools__category-title">DevOps & Hardware</h4>
             <div class="tools__items">
               <div class="tools__item">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
@@ -263,25 +407,6 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
                 <span>Git</span>
               </div>
-              <div class="tools__item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
-                <span>Linux</span>
-              </div>
-              <div class="tools__item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
-                <span>VS Code</span>
-              </div>
-              <div class="tools__item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
-                <span>SQLite</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Embedded & Hardware -->
-          <div class="tools__category">
-            <h4 class="tools__category-title">Embedded & Hardware</h4>
-            <div class="tools__items">
               <div class="tools__item">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg" alt="STM32" />
                 <span>STM32</span>
@@ -300,20 +425,21 @@
 
     <section class="about" id="about">
       <div class="row">
-      <h2>About Me</h2>
-      <div class="about__content" style="display: flex; align-items: center; gap: 2rem;">
-        <div class="about__text" style="flex: 1;">
-        <!-- Replace the below paragraph with info about yourself -->
-        <p>
-          Driven to deepen my expertise in cybersecurity and secure systems development, while also expanding into systems engineering, software development, and AI. Committed to strengthening technical capabilities, building secure and scalable solutions, and staying current with evolving technology trends. Equipped with strong analytical skills and both strategic & tactical thinking to deliver optimal solutions in complex situations.
-        </p>
-        <!-- Provide a link to your resume -->
-        <a href="#" class="btn">My Resume</a>
+      <h2>// About Me</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <p>
+            <span style="color: var(--cyber-cyan); font-family: var(--font-mono);">$ whoami</span><br><br>
+            Aspiring Cybersecurity Professional & Computer Science Engineer specializing in secure systems development. I work with a <strong style="color: var(--cyber-green);">security-first mindset</strong>, thinking beyond <em>"it works"</em> to <em>how it fails</em>, <em>how it scales</em>, and <em>how it can be attacked</em> in real environments.
+          </p>
+          <p>
+            Currently pursuing my final year at the University of Moratuwa, Sri Lanka, with a focus on building secure and scalable solutions. Equipped with strong analytical skills and strategic thinking to deliver optimal solutions in complex situations.
+          </p>
+          <a href="#" class="btn">Download Resume</a>
         </div>
 
-        <div class="about__photo-container" style="flex-shrink: 0;">
-        <!-- Add a nice photo of yourself -->
-        <img class="about__photo" src="./images/Nivishka Manchanayake.png" alt="" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover;" />
+        <div class="about__photo-container">
+          <img class="about__photo" src="./images/Nivishka Manchanayake.png" alt="Nivishka Manchanayake" />
         </div>
       </div>
       </div>
@@ -325,8 +451,8 @@
 
   <section class="contact" id="contact">
     <div class="row">
-      <h2>Get in Touch</h2>
-      <p class="contact__subtitle">Feel free to reach out through any of the platforms below</p>
+      <h2>// Establish Connection</h2>
+      <p class="contact__subtitle">Secure channels available for communication</p>
       
       <div class="contact__cards">
         <!-- Email Card -->
@@ -358,30 +484,30 @@
           <div class="contact__card-arrow">&rarr;</div>
         </a>
 
-        <!-- Facebook Card -->
-        <a href="https://facebook.com/" target="_blank" class="contact__card contact__card--facebook">
-          <div class="contact__card-icon">
+        <!-- GitHub Card -->
+        <a href="https://github.com/Nivishka-M/" target="_blank" class="contact__card contact__card--github">
+          <div class="contact__card-icon" style="background: linear-gradient(135deg, #333, #666);">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
           </div>
           <div class="contact__card-content">
-            <span class="contact__card-label">Facebook</span>
-            <span class="contact__card-value">Connect with me</span>
+            <span class="contact__card-label">GitHub</span>
+            <span class="contact__card-value">Nivishka-M</span>
           </div>
           <div class="contact__card-arrow">&rarr;</div>
         </a>
 
-        <!-- Instagram Card -->
-        <a href="https://instagram.com/" target="_blank" class="contact__card contact__card--instagram">
-          <div class="contact__card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        <!-- Twitter/X Card -->
+        <a href="https://twitter.com/" target="_blank" class="contact__card contact__card--twitter">
+          <div class="contact__card-icon" style="background: linear-gradient(135deg, #1da1f2, #0d8bd9);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
           </div>
           <div class="contact__card-content">
-            <span class="contact__card-label">Instagram</span>
-            <span class="contact__card-value">Follow me</span>
+            <span class="contact__card-label">X (Twitter)</span>
+            <span class="contact__card-value">Follow for updates</span>
           </div>
           <div class="contact__card-arrow">&rarr;</div>
         </a>
@@ -393,40 +519,22 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <!-- <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li> -->
         <li class="footer__social-link-item">
           <a href="https://github.com/Nivishka-M/" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-        <!-- <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li> -->
         <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nivishka-manchanayake-381870240/ title="Link to Linkedin Profile">
+          <a href="https://www.linkedin.com/in/nivishka-manchanayake-381870240/" title="Link to Linkedin Profile">
             <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2025 - All rights reserved.
+        &copy; 2025 Nivishka Manchanayake | Securing Digital Frontiers
       </p>
-      <!-- <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=Nivishka-M&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div> -->
     </div>
   </footer>
 
@@ -434,6 +542,7 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
+
 </body>
 
 </html>
